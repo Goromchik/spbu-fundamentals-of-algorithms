@@ -1,3 +1,5 @@
+import os
+
 import networkx as nx
 
 
@@ -21,6 +23,8 @@ def has_cycles(g: nx.Graph):
 if __name__ == "__main__":
     for filename in TEST_GRAPH_FILES:
         # Load the graph
-        G = nx.read_edgelist(f"D://algorithm//spbu-fundamentals-of-algorithms//practicum_2//homework//basic//{filename}", create_using=nx.Graph)
+        G = nx.read_edgelist(
+            os.path.join("practicum_2", "homework", filename), create_using=nx.Graph
+        )
         # Output whether it has cycles
         print(f"Graph {filename} has cycles: {has_cycles(G)}")
