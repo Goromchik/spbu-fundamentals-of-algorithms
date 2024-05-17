@@ -99,7 +99,6 @@ if __name__ == "__main__":
     # Second, implement BinaryTree.zigzag_traversal() returning the list required by the task
     # Avoid recursive traversal!
 
-    with open(r"D:\algorithm\spbu-fundamentals-of-algorithms\practicum_5\homework\basic\binary_tree_zigzag_level_order_traversal_cases.yaml", "r") as f:
         cases = yaml.safe_load(f)
 
     for i, c in enumerate(cases):
