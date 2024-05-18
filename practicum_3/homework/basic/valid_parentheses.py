@@ -63,14 +63,13 @@ def are_parentheses_valid(s: str) -> bool:
     for char in s:
         if char in "([{":
             stack.push(char)
-        if stack.empty():
-            return False
-        opening_symbol = stack.pop()
-        if opening_symbol != get_starting_symbol(char):
-            return False
+        elif char in ")]}":
+            if stack.empty():
+                return False
+            opening_symbol = stack.pop()
+            if opening_symbol != get_starting_symbol(char):
+                return False
     return stack.empty()
-
-    pass
 
 
 if __name__ == "__main__":
