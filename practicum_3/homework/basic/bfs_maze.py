@@ -35,22 +35,6 @@ class Maze:
                     print(f"{sym} ", end="")
             print()  # linebreak
 
-
-"""def solve(maze: Maze) -> None:
-    path = ""  # solution as a string made of "L", "R", "U", "D"
-    start_i = 0
-    start_j = maze.start_j
-
-    queue = deque([(start_i, start_j)])
-    visited = set([(start_i, start_j)])
-    el = {}
-
-    while queue !=0:
-        i,j = queue.popleft()
-        if maze.list_view[i][j] == "X":
-            path = _shift_coordinate( el, (i,j), start_i, start_j)"""
-
-#def solve(self) -> None:
 def solve(maze: Maze) -> None:
         path = ""
         start_i = 0 
